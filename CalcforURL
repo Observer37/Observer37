@@ -1,0 +1,9 @@
+import re           #Import simply imports a system into the code
+import requests
+
+text = requests.get('http://www.7k7k.com/').text   #This would turn all code into a text format into a list
+pattern = r'scr="(http://)+.+(\.jpg)'          #This would filter by getting everything with Http at the start, and .jpg at the end with the period meaning everything in the center
+for i in (re.findall(pattern,text)): #This would be what it does,  which is to print every instance "i" of text once
+    print(i)       #This prints i
+#
+# print(text)
